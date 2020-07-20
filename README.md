@@ -3,10 +3,10 @@ I used Typescript language to build this Demo App
 ![https://material-ui-boilerplate.vercel.app/](https://raw.githubusercontent.com/jpmayorga/material-ui-boilerplate/master/public/screenshot.png)
 
 ## It has login pages
-[https://material-ui-boilerplate.vercel.app/](https://jpmayorga.github.io/material-ui-boilerplate/)
+[https://material-ui-boilerplate.vercel.app/](https://material-ui-boilerplate.vercel.app/)
 
 ## Fetch Rick and Morty API
-[https://material-ui-boilerplate.vercel.app/dashboard/fetch](https://jpmayorga.github.io/material-ui-boilerplate/dashboard/fetch)
+[https://material-ui-boilerplate.vercel.app/dashboard/fetch](https://material-ui-boilerplate.vercel.app/dashboard/fetch)
 
 
 ## Available Scripts
