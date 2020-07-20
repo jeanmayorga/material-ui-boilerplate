@@ -42,8 +42,10 @@ export function SignIn() {
           <div className="text-box">
             <Typography variant="h3">Welcome!</Typography>
             <Typography variant="body1">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
-              rem harum dolor dolore? Repudiandae excepturi adipisci.
+              Put any words in inputs and click on login button.
+            </Typography>
+            <Typography variant="body1">
+              Escribe cualquier cosa en los inputs y dale al boton de login.
             </Typography>
           </div>
           <div className="input-box">
