@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardMedia, CardHeader } from "@material-ui/core";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  CardHeader,
+  Modal,
+} from "@material-ui/core";
 import Skeleton from "@material-ui/lab/Skeleton";
+import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 
 import { Layout } from "../../components/Layout";
 
@@ -13,9 +20,31 @@ interface Character {
   type: string;
 }
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    paper: {
+      position: "absolute",
+      width: 400,
+      backgroundColor: theme.palette.background.paper,
+      border: "2px solid #000",
+      boxShadow: theme.shadows[5],
+      padding: theme.spacing(2, 4, 3),
+    },
+  })
+);
+
 export function DashboardFetch() {
+  const classes = useStyles();
+
+  const [showModal, setShowModal] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [characters, setCharacters] = useState<Character[]>([]);
+  const [selectedCharacter, setSelectedCharacter] = useState<Character>();
+
+  const selectCharacter = (char: Character) => {
+    setSelectedCharacter(char);
+    setShowModal(true);
+  };
 
   useEffect(() => {
     const getCharacters = async () => {
@@ -56,10 +85,33 @@ export function DashboardFetch() {
 
   return (
     <Layout>
+      <Modal open={showModal} onClose={() => setShowModal(false)}>
+        <div
+          style={{
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+          className={classes.paper}
+        >
+          {selectedCharacter ? (
+            <Card>
+              <CardHeader title={selectedCharacter.name} />
+              <CardMedia
+                image={selectedCharacter.image}
+                title={selectedCharacter.name}
+                style={{ paddingTop: "56.25%" }}
+              />
+            </Card>
+          ) : (
+            <div>No has seleccionado ningun character</div>
+          )}
+        </div>
+      </Modal>
       <div className="cards-grid">
-        {characters.map((item) => (
-          <Card key={item.id}>
-            <CardHeader title={item.name} />
+        {characters.map((item: Character) => (
+          <Card key={item.id} onClick={() => selectCharacter(item)}>
+            <CardHeader title={item.name.substr(0, 12)} />
             <CardMedia
               image={item.image}
               title={item.name}
