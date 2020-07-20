@@ -1,6 +1,6 @@
 # Material UI Boilerplate Template
 I used Typescript language to build this Demo App
-![](https://raw.githubusercontent.com/jpmayorga/material-ui-boilerplate/master/public/screenshot.png)
+![https://jpmayorga.github.io/material-ui-boilerplate/](https://raw.githubusercontent.com/jpmayorga/material-ui-boilerplate/master/public/screenshot.png)
 
 ## It has login pages
 [https://jpmayorga.github.io/material-ui-boilerplate/](https://jpmayorga.github.io/material-ui-boilerplate/)
