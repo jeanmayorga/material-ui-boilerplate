@@ -32,14 +32,7 @@ export function SignIn() {
       return;
     }
 
-    if (email === "admin@admin.com" && pass === "pass") {
-      history.push("/dashboard");
-
-      return;
-    } else {
-      setHasError(true);
-      return;
-    }
+    history.push("/dashboard");
   };
 
   return (
