@@ -1,12 +1,20 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
+import { Switch, Route } from "react-router-dom";
+
+import { NotFound } from "../pages/not-found";
+import { SignIn } from "../pages/auth/sign-in";
+import { SignUp } from "../pages/auth/sign-up";
+import { Forgot } from "../pages/auth/forgot";
 
 export function Routes() {
   return (
-    <div>
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
-    </div>
+    <>
+      <Switch>
+        <Route exact path="/auth/signin" render={() => <SignIn />} />
+        <Route exact path="/auth/signup" render={() => <SignUp />} />
+        <Route exact path="/auth/forgot" render={() => <Forgot />} />
+        <Route render={() => <NotFound />} />
+      </Switch>
+    </>
   );
 }
