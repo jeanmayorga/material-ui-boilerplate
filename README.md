@@ -1,12 +1,12 @@
 # Material UI Boilerplate Template
 I used Typescript language to build this Demo App
-![https://jpmayorga.github.io/material-ui-boilerplate/](https://raw.githubusercontent.com/jpmayorga/material-ui-boilerplate/master/public/screenshot.png)
+![https://material-ui-boilerplate.vercel.app/](https://raw.githubusercontent.com/jpmayorga/material-ui-boilerplate/master/public/screenshot.png)
 
 ## It has login pages
-[https://jpmayorga.github.io/material-ui-boilerplate/](https://jpmayorga.github.io/material-ui-boilerplate/)
+[https://material-ui-boilerplate.vercel.app/](https://jpmayorga.github.io/material-ui-boilerplate/)
 
 ## Fetch Rick and Morty API
-[https://jpmayorga.github.io/material-ui-boilerplate/dashboard/fetch](https://jpmayorga.github.io/material-ui-boilerplate/dashboard/fetch)
+[https://material-ui-boilerplate.vercel.app/dashboard/fetch](https://jpmayorga.github.io/material-ui-boilerplate/dashboard/fetch)
 
 
 ## Available Scripts
