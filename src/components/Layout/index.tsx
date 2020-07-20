@@ -4,18 +4,15 @@ import {
   Toolbar,
   Typography,
   Drawer,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   makeStyles,
   createStyles,
   Theme,
 } from "@material-ui/core";
 
-import { InboxOutlined } from "@material-ui/icons";
+import { Menu } from "../Menu";
 
 interface Props {
+  title?: string;
   children: React.ReactNode;
 }
 
@@ -46,7 +43,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export function Layout({ children }: Props) {
+export function Layout({ title = "Dashboard", children }: Props) {
   const classes = useStyles();
 
   return (
@@ -54,7 +51,7 @@ export function Layout({ children }: Props) {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" noWrap>
-            Dashboard
+            {title}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -67,14 +64,7 @@ export function Layout({ children }: Props) {
       >
         <Toolbar />
         <div className={classes.drawerContainer}>
-          <List>
-            <ListItem button>
-              <ListItemIcon>
-                <InboxOutlined />
-              </ListItemIcon>
-              <ListItemText primary="Hola" />
-            </ListItem>
-          </List>
+          <Menu />
         </div>
       </Drawer>
       <main className={classes.content}>

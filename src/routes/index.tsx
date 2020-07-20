@@ -6,6 +6,7 @@ import { SignIn } from "../pages/auth/sign-in";
 import { SignUp } from "../pages/auth/sign-up";
 import { Forgot } from "../pages/auth/forgot";
 import { Dashboard } from "../pages/dashboard";
+import { DashboardFetch } from "../pages/dashboard/fetch";
 
 export function Routes() {
   return (
@@ -16,6 +17,11 @@ export function Routes() {
         <Route exact path="/auth/signup" render={() => <SignUp />} />
         <Route exact path="/auth/forgot" render={() => <Forgot />} />
         <Route exact path="/dashboard" render={() => <Dashboard />} />
+        <Route
+          exact
+          path="/dashboard/fetch"
+          render={() => <DashboardFetch />}
+        />
         <Route render={() => <NotFound />} />
       </Switch>
     </>
