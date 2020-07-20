@@ -1,6 +1,5 @@
 {
   "name": "material-ui-boilerplate",
-  "homepage": "https://jpmayorga.github.io/material-ui-boilerplate/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
